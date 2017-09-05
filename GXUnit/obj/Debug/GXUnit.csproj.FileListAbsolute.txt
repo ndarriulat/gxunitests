@@ -1,0 +1,125 @@
+C:\Users\Lali\Extensiones\GxUnit\trunk\GXUnit\GXUnit\obj\Debug\PGGXUnit.Packages.GXUnit.GXUnitUI.GXUnitMainWindow.resources
+C:\Users\Lali\Extensiones\GxUnit\trunk\GXUnit\GXUnit\obj\Debug\PGGXUnit.Packages.GXUnit.GXUnitUI.SelectSuite.resources
+C:\Users\Lali\Extensiones\GxUnit\trunk\GXUnit\GXUnit\obj\Debug\PGGXUnit.Packages.GXUnit.Resources.SelectSuite.resources
+C:\Users\Lali\Extensiones\GxUnit\trunk\GXUnit\GXUnit\obj\Debug\PGGXUnit.Packages.GXUnit.Utils.AboutBox.resources
+C:\Users\Lali\Extensiones\GxUnit\trunk\GXUnit\GXUnit\obj\Debug\PGGXUnit.Packages.GXUnit.MyEditor.resources
+C:\Users\Lali\Extensiones\GxUnit\trunk\GXUnit\GXUnit\obj\Debug\PGGXUnit.Packages.GXUnit.Utils.InputBox.resources
+C:\Users\Lali\Extensiones\GxUnit\trunk\GXUnit\GXUnit\obj\Debug\PGGXUnit.Packages.GXUnit.Items.resources
+C:\Users\Lali\Extensiones\GxUnit\trunk\GXUnit\GXUnit\obj\Debug\GXUnit.csproj.GenerateResource.Cache
+C:\Users\Lali\Extensiones\GxUnit\trunk\GXUnit\GXUnit\bin\Debug\GXUnitCore\TestCaseSourceCall.dkt
+C:\Users\Lali\Extensiones\GxUnit\trunk\GXUnit\GXUnit\bin\Debug\GXUnit.dll
+C:\Users\Lali\Extensiones\GxUnit\trunk\GXUnit\GXUnit\bin\Debug\GXUnit.pdb
+C:\Users\Lali\Extensiones\GxUnit\trunk\GXUnit\GXUnit\bin\Debug\Artech.Architecture.BL.Framework.dll
+C:\Users\Lali\Extensiones\GxUnit\trunk\GXUnit\GXUnit\bin\Debug\Artech.Architecture.Common.dll
+C:\Users\Lali\Extensiones\GxUnit\trunk\GXUnit\GXUnit\bin\Debug\Artech.Architecture.UI.Framework.dll
+C:\Users\Lali\Extensiones\GxUnit\trunk\GXUnit\GXUnit\bin\Debug\Artech.Common.dll
+C:\Users\Lali\Extensiones\GxUnit\trunk\GXUnit\GXUnit\bin\Debug\Artech.Common.Framework.dll
+C:\Users\Lali\Extensiones\GxUnit\trunk\GXUnit\GXUnit\bin\Debug\Artech.Common.Helpers.dll
+C:\Users\Lali\Extensiones\GxUnit\trunk\GXUnit\GXUnit\bin\Debug\Artech.Common.Properties.dll
+C:\Users\Lali\Extensiones\GxUnit\trunk\GXUnit\GXUnit\bin\Debug\Artech.FrameworkDE.dll
+C:\Users\Lali\Extensiones\GxUnit\trunk\GXUnit\GXUnit\bin\Debug\Artech.Genexus.Common.dll
+C:\Users\Lali\Extensiones\GxUnit\trunk\GXUnit\GXUnit\bin\Debug\Artech.MsBuild.Common.dll
+C:\Users\Lali\Extensiones\GxUnit\trunk\GXUnit\GXUnit\bin\Debug\Artech.Udm.Framework.dll
+C:\Users\Lali\Extensiones\GxUnit\trunk\GXUnit\GXUnit\bin\Debug\Connector.dll
+C:\Users\Lali\Extensiones\GxUnit\trunk\GXUnit\GXUnit\bin\Debug\Microsoft.Build.Utilities.v3.5.dll
+C:\Users\Lali\Extensiones\GxUnit\trunk\GXUnit\GXUnit\bin\Debug\Microsoft.Practices.ObjectBuilder.dll
+C:\Users\Lali\Extensiones\GxUnit\trunk\GXUnit\GXUnit\bin\Debug\Artech.Udm.Layers.Common.dll
+C:\Users\Lali\Extensiones\GxUnit\trunk\GXUnit\GXUnit\bin\Debug\Artech.Udm.Architecture.Common.dll
+C:\Users\Lali\Extensiones\GxUnit\trunk\GXUnit\GXUnit\bin\Debug\Artech.Architecture.Language.dll
+C:\Users\Lali\Extensiones\GxUnit\trunk\GXUnit\GXUnit\bin\Debug\log4net.dll
+C:\Users\Lali\Extensiones\GxUnit\trunk\GXUnit\GXUnit\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Users\Lali\Extensiones\GxUnit\trunk\GXUnit\GXUnit\bin\Debug\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll
+C:\Users\Lali\Extensiones\GxUnit\trunk\GXUnit\GXUnit\bin\Debug\Artech.Template.Parser.dll
+C:\Users\Lali\Extensiones\GxUnit\trunk\GXUnit\GXUnit\bin\Debug\Artech.Template.Base.dll
+C:\Users\Lali\Extensiones\GxUnit\trunk\GXUnit\GXUnit\bin\Debug\Artech.Common.Controls.dll
+C:\Users\Lali\Extensiones\GxUnit\trunk\GXUnit\GXUnit\bin\Debug\Microsoft.mshtml.dll
+C:\Users\Lali\Extensiones\GxUnit\trunk\GXUnit\GXUnit\bin\Debug\Artech.CommonI.dll
+C:\Users\Lali\Extensiones\GxUnit\trunk\GXUnit\GXUnit\bin\Debug\Artech.Udm.BL.dll
+C:\Users\Lali\Extensiones\GxUnit\trunk\GXUnit\GXUnit\bin\Debug\Artech.Udm.Layers.dll
+C:\Users\Lali\Extensiones\GxUnit\trunk\GXUnit\GXUnit\bin\Debug\Artech.Template.Helper.dll
+C:\Users\Lali\Extensiones\GxUnit\trunk\GXUnit\GXUnit\bin\Debug\Artech.Architecture.BL.Framework.pdb
+C:\Users\Lali\Extensiones\GxUnit\trunk\GXUnit\GXUnit\bin\Debug\Artech.Architecture.Common.pdb
+C:\Users\Lali\Extensiones\GxUnit\trunk\GXUnit\GXUnit\bin\Debug\Artech.Architecture.UI.Framework.pdb
+C:\Users\Lali\Extensiones\GxUnit\trunk\GXUnit\GXUnit\bin\Debug\Artech.Common.pdb
+C:\Users\Lali\Extensiones\GxUnit\trunk\GXUnit\GXUnit\bin\Debug\Artech.Common.Framework.pdb
+C:\Users\Lali\Extensiones\GxUnit\trunk\GXUnit\GXUnit\bin\Debug\Artech.Common.Helpers.pdb
+C:\Users\Lali\Extensiones\GxUnit\trunk\GXUnit\GXUnit\bin\Debug\Artech.Common.Properties.pdb
+C:\Users\Lali\Extensiones\GxUnit\trunk\GXUnit\GXUnit\bin\Debug\Artech.FrameworkDE.pdb
+C:\Users\Lali\Extensiones\GxUnit\trunk\GXUnit\GXUnit\bin\Debug\Artech.Genexus.Common.pdb
+C:\Users\Lali\Extensiones\GxUnit\trunk\GXUnit\GXUnit\bin\Debug\Artech.MsBuild.Common.pdb
+C:\Users\Lali\Extensiones\GxUnit\trunk\GXUnit\GXUnit\bin\Debug\Artech.Udm.Framework.pdb
+C:\Users\Lali\Extensiones\GxUnit\trunk\GXUnit\GXUnit\bin\Debug\Microsoft.Build.Utilities.v3.5.xml
+C:\Users\Lali\Extensiones\GxUnit\trunk\GXUnit\GXUnit\bin\Debug\Microsoft.Practices.ObjectBuilder.pdb
+C:\Users\Lali\Extensiones\GxUnit\trunk\GXUnit\GXUnit\bin\Debug\Artech.Udm.Layers.Common.pdb
+C:\Users\Lali\Extensiones\GxUnit\trunk\GXUnit\GXUnit\bin\Debug\Artech.Udm.Architecture.Common.pdb
+C:\Users\Lali\Extensiones\GxUnit\trunk\GXUnit\GXUnit\bin\Debug\Artech.Architecture.Language.pdb
+C:\Users\Lali\Extensiones\GxUnit\trunk\GXUnit\GXUnit\bin\Debug\Artech.Common.Controls.pdb
+C:\Users\Lali\Extensiones\GxUnit\trunk\GXUnit\GXUnit\bin\Debug\Artech.CommonI.pdb
+C:\Users\Lali\Extensiones\GxUnit\trunk\GXUnit\GXUnit\bin\Debug\Artech.Udm.BL.pdb
+C:\Users\Lali\Extensiones\GxUnit\trunk\GXUnit\GXUnit\bin\Debug\Artech.Udm.Layers.pdb
+C:\Users\Lali\Extensiones\GxUnit\trunk\GXUnit\GXUnit\obj\Debug\GXUnit.dll
+C:\Users\Lali\Extensiones\GxUnit\trunk\GXUnit\GXUnit\obj\Debug\GXUnit.pdb
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\bin\Debug\GXUnitCore\TestCaseSourceCall.dkt
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\bin\Debug\GXUnit.dll
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\bin\Debug\GXUnit.pdb
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\bin\Debug\Artech.Architecture.BL.Framework.dll
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\bin\Debug\Artech.Architecture.Common.dll
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\bin\Debug\Artech.Architecture.UI.Framework.dll
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\bin\Debug\Artech.Common.dll
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\bin\Debug\Artech.Common.Framework.dll
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\bin\Debug\Artech.Common.Helpers.dll
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\bin\Debug\Artech.Common.Properties.dll
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\bin\Debug\Artech.FrameworkDE.dll
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\bin\Debug\Artech.Genexus.Common.dll
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\bin\Debug\Artech.MsBuild.Common.dll
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\bin\Debug\Artech.Udm.Framework.dll
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\bin\Debug\Connector.dll
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\bin\Debug\Microsoft.Build.Utilities.v3.5.dll
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\bin\Debug\Microsoft.Practices.ObjectBuilder.dll
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\bin\Debug\Artech.Udm.Layers.Common.dll
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\bin\Debug\Artech.Udm.Architecture.Common.dll
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\bin\Debug\Artech.Architecture.Language.dll
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\bin\Debug\log4net.dll
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\bin\Debug\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\bin\Debug\Artech.Template.Parser.dll
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\bin\Debug\Artech.Template.Base.dll
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\bin\Debug\Artech.Common.Controls.dll
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\bin\Debug\Microsoft.mshtml.dll
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\bin\Debug\Artech.CommonI.dll
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\bin\Debug\Artech.Udm.BL.dll
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\bin\Debug\Artech.Udm.Layers.dll
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\bin\Debug\Artech.Template.Helper.dll
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\bin\Debug\Microsoft.ExceptionMessageBox.dll
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\bin\Debug\Artech.Architecture.BL.Framework.pdb
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\bin\Debug\Artech.Architecture.Common.pdb
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\bin\Debug\Artech.Architecture.UI.Framework.pdb
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\bin\Debug\Artech.Common.pdb
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\bin\Debug\Artech.Common.Framework.pdb
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\bin\Debug\Artech.Common.Helpers.pdb
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\bin\Debug\Artech.Common.Properties.pdb
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\bin\Debug\Artech.FrameworkDE.pdb
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\bin\Debug\Artech.Genexus.Common.pdb
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\bin\Debug\Artech.MsBuild.Common.pdb
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\bin\Debug\Artech.Udm.Framework.pdb
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\bin\Debug\Microsoft.Build.Utilities.v3.5.xml
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\bin\Debug\Microsoft.Practices.ObjectBuilder.pdb
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\bin\Debug\Artech.Udm.Layers.Common.pdb
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\bin\Debug\Artech.Udm.Architecture.Common.pdb
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\bin\Debug\Artech.Architecture.Language.pdb
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\bin\Debug\Artech.Common.Controls.pdb
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\bin\Debug\Artech.CommonI.pdb
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\bin\Debug\Artech.Udm.BL.pdb
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\bin\Debug\Artech.Udm.Layers.pdb
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\bin\Debug\es\Microsoft.Build.Utilities.v3.5.resources.dll
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\obj\Debug\PGGXUnit.Packages.GXUnit.GXUnitUI.GXUnitMainWindow.resources
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\obj\Debug\PGGXUnit.Packages.GXUnit.GXUnitUI.SelectSuite.resources
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\obj\Debug\PGGXUnit.Packages.GXUnit.Resources.SelectSuite.resources
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\obj\Debug\PGGXUnit.Packages.GXUnit.Utils.AboutBox.resources
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\obj\Debug\PGGXUnit.Packages.GXUnit.MyEditor.resources
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\obj\Debug\PGGXUnit.Packages.GXUnit.Utils.InputBox.resources
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\obj\Debug\PGGXUnit.Packages.GXUnit.Items.resources
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\obj\Debug\GXUnit.csproj.GenerateResource.Cache
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\obj\Debug\GXUnit.dll
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\obj\Debug\GXUnit.pdb
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\obj\Debug\GXUnit.csprojResolveAssemblyReference.cache
