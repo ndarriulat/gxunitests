@@ -187,6 +187,8 @@
     <Compile Include="Utils\InputBox.designer.cs">
       <DependentUpon>InputBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utils\JUnitXmlFormatter.cs" />
+    <Compile Include="Utils\XmlFormatter.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Catalog.xml">

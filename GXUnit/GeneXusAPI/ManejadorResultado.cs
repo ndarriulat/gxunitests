@@ -61,7 +61,11 @@ namespace PGGXUnit.Packages.GXUnit.GeneXusAPI
 
                 string sourcePath = Path.Combine(kbPath, fileName);
                 string targetPath = Path.Combine(resultPath, fileName);
-                File.Copy(sourcePath, targetPath);
+                // Generate Xml with JUnit format
+                
+                // File.Move generated xml to GxUnitResults folder
+
+                //File.Copy(sourcePath, targetPath);
                 File.Delete(sourcePath);
 
                 return targetPath;
