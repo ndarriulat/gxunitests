@@ -64,7 +64,6 @@ namespace PGGXUnit.Packages.GXUnit.GeneXusAPI
 
                 DirectoryInfo di = Directory.CreateDirectory(resultPath);
 
-
                 string sourcePath = Path.Combine(kbPath, fileName);
                 string targetPath = Path.Combine(resultPath, fileName);
                 // Generate Xml with JUnit format in the specified targetPath

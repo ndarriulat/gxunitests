@@ -15,12 +15,12 @@ namespace PGGXUnit.Packages.GXUnit.MSBuildAPI
         private string kbPath;
         //private string xmlName;
 
-        [Required]
-        public string KBPath
-        {
-            get { return kbPath; }
-            set { kbPath = value; }
-        }
+        //[Required]
+        //public string Path
+        //{
+        //    get { return kbPath; }
+        //    set { kbPath = value; }
+        //}
 
         //[Required]
         //public string XMLName
@@ -34,12 +34,12 @@ namespace PGGXUnit.Packages.GXUnit.MSBuildAPI
             OutputSubscribe();
             CommonServices.Output.StartSection("Generate GXUnit Results Task");
 
-            //ManejadorContexto.Model = KB.DesignModel;
-            FuncionesAuxiliares.EscribirOutput("LastXMLName: " + ManejadorContexto.LastXMLName);
+            string kbPath=this.KB.Location;
+            string temporalResultsPath = Path.Combine(kbPath, "CSharpModel\\web");
+
             ManejadorResultado mr = ManejadorResultado.GetInstance();
-            string outputPath = mr.CreateResult(ManejadorContexto.LastXMLName, KBPath);
-            //GxModel modelo = KBManager.getTargetModel();
-            //string xmlPath = Path.Combine(modelo.WebTargetFullPath, xmlName);
+            // TODO: return this output path
+            string outputPath = mr.CreateResult(ManejadorContexto.LastXMLName, temporalResultsPath);
 
             ManejadorProcedimiento mp = new ManejadorProcedimiento();
             mp.EliminarProcedimiento("RunnerProcedure");
