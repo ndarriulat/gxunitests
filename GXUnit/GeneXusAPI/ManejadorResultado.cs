@@ -9,6 +9,7 @@ using Artech.Architecture.UI.Framework.Services;
 using Artech.Genexus.Common;
 using System.Collections.Generic;
 using System.Threading;
+using PGGXUnit.Packages.GXUnit.Utils;
 
 namespace PGGXUnit.Packages.GXUnit.GeneXusAPI
 {
@@ -48,11 +49,16 @@ namespace PGGXUnit.Packages.GXUnit.GeneXusAPI
         //}
 
 
-        public string CreateResult(String fileName)
+        public string CreateResult(String fileName,string kbPath=null)
         {
             try
             {
-                string kbPath = KBManager.getTargetPath();
+                // TODO: remove optional parameter for kbPath
+                //string kbPath = KBManager.getTargetPath();
+                if (kbPath==null)
+                {
+                    kbPath = KBManager.getTargetPath();
+                }
 
                 string resultPath = kbPath.Trim() + Constantes.RESULT_PATH;
 
@@ -61,11 +67,11 @@ namespace PGGXUnit.Packages.GXUnit.GeneXusAPI
 
                 string sourcePath = Path.Combine(kbPath, fileName);
                 string targetPath = Path.Combine(resultPath, fileName);
-                // Generate Xml with JUnit format
+                // Generate Xml with JUnit format in the specified targetPath
+                IXmlFormatter xmlFormatter = new JUnitXmlFormatter();
+                xmlFormatter.ConvertXml(sourcePath, targetPath);
 
-                // File.Move generated xml to GxUnitResults folder
-
-                File.Copy(sourcePath, targetPath);
+                //File.Copy(sourcePath, targetPath);
                 File.Delete(sourcePath);
 
                 return targetPath;

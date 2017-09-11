@@ -9,14 +9,20 @@ namespace PGGXUnit.Packages.GXUnit.Utils
 {
     class JUnitXmlFormatter : IXmlFormatter
     {
+        /// <summary>
+        /// Converts a Genexus SDT xml into a xml file with JUnit format.
+        /// </summary>
+        /// <param name="originalXmlPath">Path of the xml to be formatted.</param>
+        /// <param name="formattedXmlPath">Output path of the xml with JUnit format.</param>
         public void ConvertXml(string originalXmlPath, string formattedXmlPath)
         {
             // Load the original xml document
             XmlDocument originalDocument = new XmlDocument();
-            originalDocument.Load(@"C:\Models\SecondGxApp_KB\CSharpModel\web\GXUnitResults\R_20170907_120654.xml");
+            originalDocument.Load(originalXmlPath);
 
             // Get all suites from the original xml            
             XmlNodeList gxUnitSuitesNodes = originalDocument.SelectNodes("//Suites//Suite//Suite");
+
 
             // Create XmlDocument for the new xml file
             XmlDocument formattedDocument = new XmlDocument();
@@ -41,7 +47,7 @@ namespace PGGXUnit.Packages.GXUnit.Utils
             formattedDocument.AppendChild(testsuitesRoot);
 
             // Saves the new document in the specified directory
-            formattedDocument.Save(@"C:\Models\SecondGxApp_KB\CSharpModel\web\GXUnitResults\junit_test.xml");
+            formattedDocument.Save(formattedXmlPath);
         }
 
         /// <summary>

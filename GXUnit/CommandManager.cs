@@ -35,6 +35,9 @@ namespace PGGXUnit.Packages.GXUnit
             //Open GXUnit Toolwindow
             AddCommand(CommandKeys.GXUnitWindow, new ExecHandler(ExecGXUnitWindow));
 
+            //Open Results Viewer
+            AddCommand(CommandKeys.GxUnitResultsWindow, new ExecHandler(ExecGXUnitWindow));
+
             //About
             AddCommand(CommandKeys.About, new ExecHandler(ExecAbout));
 		}
@@ -156,6 +159,16 @@ namespace PGGXUnit.Packages.GXUnit
             return true;
         }
 
+        public bool RunCommand_GXUnitResultsWindow(CommandData commandData)
+        {
+            if (GXUnitPackage.resultViewer == null)
+                GXUnitPackage.resultViewer = GXUnitResultsViewer.getInstance();
+            UIServices.ToolWindows.ShowToolWindow(GXUnitResultsViewer.guid);
+            UIServices.ToolWindows.FocusToolWindow(GXUnitResultsViewer.guid);
+            GXUnitPackage.resultViewer.SetFocus();
+            return true;
+        }
+
         //// NOT HANDLED (CFBP)
         //public bool ExecAutoGenerate(CommandData commandData)
         //{
@@ -171,5 +184,5 @@ namespace PGGXUnit.Packages.GXUnit
         //    return true;
         //}
 
-	}
+    }
 }

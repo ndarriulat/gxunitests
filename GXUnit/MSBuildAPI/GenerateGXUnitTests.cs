@@ -14,6 +14,14 @@ namespace PGGXUnit.Packages.GXUnit.MSBuildAPI
     {
         bool isSuccsess = true;
         private string xmlName;
+        private string targetPath;
+
+        [Required]
+        public string TargetPath
+        {
+            get { return targetPath; }
+            set { targetPath = value; }
+        }
 
         [Output]
         public string XMLName
@@ -56,7 +64,8 @@ namespace PGGXUnit.Packages.GXUnit.MSBuildAPI
                 ManejadorRunner mr = ManejadorRunner.GetInstance();
                 if (testsSelected(testCaseList))
                 {
-                    mr.CrearRunner(testCaseList, out xmlName);
+                    //xmlName = XMLName;
+                    mr.CrearRunner(testCaseList, out xmlName, TargetPath);
 
                     Procedure runner = ManejadorProcedimiento.GetProcedureObject(KB.DesignModel, "RunnerProcedure");
 

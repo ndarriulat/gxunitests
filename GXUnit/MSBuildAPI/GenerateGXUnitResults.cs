@@ -10,41 +10,43 @@ using PGGXUnit.Packages.GXUnit.GeneXusAPI;
 
 namespace PGGXUnit.Packages.GXUnit.MSBuildAPI
 {
-    //public class GenerateGXUnitResults : ArtechTask
-    //{
-    //    private string xmlName;
+    public class GenerateGXUnitResults : ArtechTask
+    {
+        private string kbPath;
+        //private string xmlName;
 
-    //    [Required]
-    //    public string XMLName
-    //    {
-    //        get { return xmlName; }
-    //        set { xmlName = value; }
-    //    }
+        [Required]
+        public string KBPath
+        {
+            get { return kbPath; }
+            set { kbPath = value; }
+        }
 
-    //    public override bool Execute()
-    //    {
-    //        OutputSubscribe();
-    //        CommonServices.Output.StartSection("Generate GXUnit Results Task");
+        //[Required]
+        //public string XMLName
+        //{
+        //    get { return xmlName; }
+        //    set { xmlName = value; }
+        //}
 
-    //        ManejadorContexto.Model = KB.DesignModel;
+        public override bool Execute()
+       {
+            OutputSubscribe();
+            CommonServices.Output.StartSection("Generate GXUnit Results Task");
 
-    //        String nom = System.DateTime.Now.ToString("R_yyyyMMdd_HHmmss");
-    //        ManejadorResultado mr = ManejadorResultado.GetInstance();
-    //        GxModel modelo = KBManager.getTargetModel();
-    //        string xmlPath = Path.Combine(modelo.WebTargetFullPath, xmlName);
+            //ManejadorContexto.Model = KB.DesignModel;
+            FuncionesAuxiliares.EscribirOutput("LastXMLName: " + ManejadorContexto.LastXMLName);
+            ManejadorResultado mr = ManejadorResultado.GetInstance();
+            string outputPath = mr.CreateResult(ManejadorContexto.LastXMLName, KBPath);
+            //GxModel modelo = KBManager.getTargetModel();
+            //string xmlPath = Path.Combine(modelo.WebTargetFullPath, xmlName);
 
-    //       // List<string> res = mr.GetResultado(xmlPath, xmlName);
-    //       // foreach (string s in res)
-    //       // {
-    //       //     CommonServices.Output.AddLine(s);
-    //       // }
+            ManejadorProcedimiento mp = new ManejadorProcedimiento();
+            mp.EliminarProcedimiento("RunnerProcedure");
 
-    //        ManejadorProcedimiento mp = new ManejadorProcedimiento();
-    //        mp.EliminarProcedimiento("RunnerProcedure");
-
-    //        CommonServices.Output.EndSection("Generate GXUnit Results Task", true);
-    //        OutputUnsubscribe();
-    //        return true;
-    //    }
-    //}
+            CommonServices.Output.EndSection("Generate GXUnit Results Task", true);
+            OutputUnsubscribe();
+            return true;
+        }
+    }
 }

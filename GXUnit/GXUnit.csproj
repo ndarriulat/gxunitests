@@ -59,6 +59,19 @@
   <PropertyGroup>
     <StartupObject />
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'msbuild_debug|AnyCPU'">
+    <OutputPath>bin\msbuild_debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;GXTILO</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'msbuild|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\msbuild\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;GXTILO</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Artech.Architecture.BL.Framework">
       <HintPath>$(GX_SDK_DIR)\Bin\Artech.Architecture.BL.Framework.dll</HintPath>
@@ -117,10 +130,18 @@
     <Compile Include="Editor.designer.cs">
       <DependentUpon>Editor.cs</DependentUpon>
     </Compile>
+    <Compile Include="GeneXusAPI\GxHelper.cs" />
     <Compile Include="GeneXusAPI\KBManager.cs" />
     <Compile Include="GeneXusAPI\ManejadorDataProvider.cs" />
     <Compile Include="GeneXusAPI\ManejadorResultado.cs" />
     <Compile Include="GeneXusAPI\ManejadorTransaccion.cs" />
+    <Compile Include="GXUnitCore\GxuHelper.cs" />
+    <Compile Include="GXUnitUI\GXUnitResultsViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GXUnitUI\GXUnitResultsViewer.Designer.cs">
+      <DependentUpon>GXUnitResultsViewer.cs</DependentUpon>
+    </Compile>
     <Compile Include="MSBuildAPI\GenerateGXUnitResults.cs" />
     <Compile Include="MSBuildAPI\GenerateGXUnitTests.cs" />
     <Compile Include="GeneXusAPI\TestCaseDefaultProvider.cs" />
@@ -204,6 +225,9 @@
     <Content Include="Resources\Update.ico" />
     <EmbeddedResource Include="GXUnitUI\GXUnitMainWindow.resx">
       <DependentUpon>GXUnitMainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GXUnitUI\GXUnitResultsViewer.resx">
+      <DependentUpon>GXUnitResultsViewer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GXUnitUI\SelectSuite.resx">
       <DependentUpon>SelectSuite.cs</DependentUpon>

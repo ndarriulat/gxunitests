@@ -43,9 +43,8 @@ namespace PGGXUnit.Packages.GXUnit.GXUnitCore
         }
 
        
-        public bool CrearRunner(LinkedList<DTTestCase> lista, out string XMLName)
+        public bool CrearRunner(LinkedList<DTTestCase> lista, out string XMLName,string targetPath = null)
         {
-
 
             XMLName = System.DateTime.Now.ToString("R_yyyyMMdd_HHmmss") + ".xml";
             ManejadorContexto.LastXMLName = XMLName;
@@ -53,7 +52,12 @@ namespace PGGXUnit.Packages.GXUnit.GXUnitCore
             //Check if the file already exists and delete it
             try
             {
-                string targetPath = KBManager.getTargetPath();
+                // TODO: REMOVE the targetPath optional parameter
+                if (targetPath == null)
+                {
+                    targetPath = KBManager.getTargetPath();
+                }
+              
                 targetPath = Path.Combine(targetPath, XMLName);
                 if (File.Exists(targetPath) )
                 {

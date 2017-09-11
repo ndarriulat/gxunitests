@@ -31,8 +31,9 @@ namespace PGGXUnit.Packages.GXUnit
 
         public static Guid guid = typeof(GXUnitPackage).GUID;
         public static GXUnitMainWindow GXUnitWindow;
+        public static GXUnitResultsViewer resultViewer;
 
-		public override string Name
+        public override string Name
 		{
 			get { return "GXUnit"; }
 		}
