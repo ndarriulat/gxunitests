@@ -4,4 +4,15 @@
     <StartAction>Program</StartAction>
     <StartProgram>C:\Program Files %28x86%29\GeneXus\GeneXus15\GeneXus.exe</StartProgram>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'msbuild_debug|AnyCPU'">
+    <StartAction>Program</StartAction>
+    <StartProgram>C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe</StartProgram>
+    <StartArguments>"C:\Users\Nicolas\Documents\Labs\GXtest4\gxunit.msbuild"</StartArguments>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'msbuild|AnyCPU'">
+    <StartProgram>C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe</StartProgram>
+    <StartAction>Program</StartAction>
+    <StartArguments>"C:\Users\Nicolas\Documents\Labs\GXtest4\gxunit.msbuild"</StartArguments>
+  </PropertyGroup>
 </Project>

@@ -93,7 +93,7 @@ namespace PGGXUnit.Packages.GXUnit.Utils
                 // Convert time from miliseconds to seconds
                 double testCaseExecutionTime_Seconds = testCaseExecutionTime / 1000;
                 // Set test time execution
-                testCaseElement.SetAttribute("time", testCaseExecutionTime_Seconds + "");
+                testCaseElement.SetAttribute("time", testCaseExecutionTime_Seconds.ToString("F0"));
 
                 // Set className in order to display a package name in Jenkins
                 testCaseElement.SetAttribute("classname", suiteName + "." + testCaseName);

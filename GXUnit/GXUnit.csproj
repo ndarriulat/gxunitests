@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>PGGXUnit.Packages.GXUnit</RootNamespace>
     <AssemblyName>GXUnit</AssemblyName>
-    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+    <RunPostBuildEvent>Always</RunPostBuildEvent>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <OldToolsVersion>3.5</OldToolsVersion>
@@ -291,8 +291,10 @@
   -->
   <PropertyGroup>
     <PostBuildEvent>xcopy "$(TargetDir)$(TargetFileName)" "$(GX_PROGRAM_DIR)\Packages" /q /Y
-xcopy "$(TargetDir)$(TargetFileName)" "$(GX_PROGRAM_DIR)\" /q /Y
+xcopy "$(TargetDir)$(TargetName).pdb" "$(GX_PROGRAM_DIR)\Packages" /q /Y
 xcopy "$(SolutionDir)GXUnit\GXUnitCore\TestCaseSourceCall.dkt"  "$(GX_PROGRAM_DIR)\Templates\"  /q /Y
+"$(GX_PROGRAM_DIR)\genexus.exe" /install
+
 
 
 rem "$(GX_SDK_DIR)\Tools\Updater" "$(ProjectDir)Catalog.xml" "$(ProjectDir)" "$(GX_PROGRAM_DIR)"\ $(ConfigurationName)
