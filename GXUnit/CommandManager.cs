@@ -111,7 +111,7 @@ namespace PGGXUnit.Packages.GXUnit
 
                     //Eliminar Carpetas
                     ManejadorFolder mf = new ManejadorFolder();
-                    DTFolder folder = new DTFolder(Constantes.carpetaSuites, "");
+                    DTFolder folder = Constantes.carpetaSuites;
                     mf.EliminarFolder(folder);
 
                     ManejadorContexto.GXUnitInicializado = false;

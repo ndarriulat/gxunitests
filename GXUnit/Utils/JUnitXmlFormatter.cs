@@ -93,7 +93,7 @@ namespace PGGXUnit.Packages.GXUnit.Utils
                 // Convert time from miliseconds to seconds
                 double testCaseExecutionTime_Seconds = testCaseExecutionTime / 1000;
                 // Set test time execution
-                testCaseElement.SetAttribute("time", testCaseExecutionTime_Seconds.ToString("F0"));
+                testCaseElement.SetAttribute("time", testCaseExecutionTime_Seconds.ToString().Replace(',', '.'));
 
                 // Set className in order to display a package name in Jenkins
                 testCaseElement.SetAttribute("classname", suiteName + "." + testCaseName);
@@ -115,7 +115,7 @@ namespace PGGXUnit.Packages.GXUnit.Utils
 
             // Convert time from miliseconds to seconds
             double suiteExecutionTime_Seconds = suiteExecutionTime / 1000;
-            suiteElement.SetAttribute("time", suiteExecutionTime_Seconds + "");
+            suiteElement.SetAttribute("time", suiteExecutionTime_Seconds.ToString().Replace(',', '.'));
         }
 
         /// <summary>

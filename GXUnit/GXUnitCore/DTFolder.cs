@@ -2,14 +2,16 @@
 
 namespace PGGXUnit.Packages.GXUnit.GXUnitCore
 {
-    class DTFolder : DTObjeto
+    public class DTFolder : DTObjeto
     {
         private String NombrePadre;
+        public Guid IdObjeto { get; set; }
 
-        public DTFolder(String nom, String nomPadre)
+        public DTFolder(String nom, Guid Id, String nomPadre)
             : base(nom)
         {
             NombrePadre = nomPadre;
+            IdObjeto = Id;
         }
 
         public String GetNombrePadre()

@@ -10,7 +10,6 @@ namespace PGGXUnit.Packages.GXUnit.GXUnitCore
     {
         private static ManejadorRunner instance = new ManejadorRunner();
         private const String Nombre = "RunnerProcedure";
-        private const String Folder = "GXUnit";
 
         private ManejadorRunner()
         {
@@ -159,7 +158,7 @@ namespace PGGXUnit.Packages.GXUnit.GXUnitCore
                         }
 
                     }
-                    if (testcase1.GetFolder().Equals("GXUnitSuites"))
+                    if (testcase1.GetFolder().Equals(Constantes.carpetaSuites.GetNombre()))
                     {
                         procSource += "&" + testcase1.GetNombre() + ".SuiteName = '" + testcase1.GetNombre() + "'\r\n";
                         procSource += "&SDTSuiteSuite.Suite = &" + testcase1.GetNombre() + "\r\n";
@@ -181,7 +180,7 @@ namespace PGGXUnit.Packages.GXUnit.GXUnitCore
             procSource += "&xmlWriter.WriteRawText(&SDTSuite.ToXml())\r\n";
             procSource += "&xmlWriter.Close()\r\n";
 
-            Procedimiento proc = new Procedimiento(Nombre, procSource, procRules, Folder, variables, propiedades);
+            Procedimiento proc = new Procedimiento(Nombre, procSource, procRules, Constantes.carpetaGXUnit, variables, propiedades);
             ManejadorProcedimiento m = new ManejadorProcedimiento();
             m.CrearProcedimiento(proc, true);
 

@@ -15,12 +15,12 @@ namespace PGGXUnit.Packages.GXUnit.GXUnitCore
         private LinkedList<Parametro> variablesrule;
 
         /* Crea procedimientos de GXUint y el runner */
-        public Procedimiento(String nombre, String source, String rules, String folder, LinkedList<DTVariable> variables, LinkedList<DTPropiedad> propiedades)
+        public Procedimiento(String nombre, String source, String rules, DTFolder folder, LinkedList<DTVariable> variables, LinkedList<DTPropiedad> propiedades)
             : base(nombre)
         {
             this.source      = source;
             this.rules       = rules;
-            this.folder      = folder;
+            this.folder      = folder.GetNombre();
             this.variables   = variables;
             this.propiedades = propiedades;
         }

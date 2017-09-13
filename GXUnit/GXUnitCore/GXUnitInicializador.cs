@@ -74,7 +74,7 @@ namespace PGGXUnit.Packages.GXUnit.GXUnitCore
             procSource += "SetGXUnitSession(&Parent,&SDTSuite.ToXml())\r\n";
             procSource += "\r\n";
             
-            Procedimiento p = new Procedimiento(nombre,procSource,procRules,"GXUnit",variables,propiedades);
+            Procedimiento p = new Procedimiento(nombre,procSource,procRules, Constantes.carpetaFrameworkAsserts, variables,propiedades);
             ManejadorProcedimiento m = new ManejadorProcedimiento();
             m.CrearProcedimiento(p,true);
 
@@ -135,7 +135,7 @@ namespace PGGXUnit.Packages.GXUnit.GXUnitCore
             procSource += "SetGXUnitSession(&Parent,&SDTSuite.ToXml())\r\n";
             procSource += "\r\n";
 
-            Procedimiento p = new Procedimiento(nombre, procSource, procRules, "GXUnit", variables, propiedades);
+            Procedimiento p = new Procedimiento(nombre, procSource, procRules, Constantes.carpetaFrameworkAsserts, variables, propiedades);
             
             ManejadorProcedimiento m = new ManejadorProcedimiento();
             m.CrearProcedimiento(p,true);
@@ -169,7 +169,7 @@ namespace PGGXUnit.Packages.GXUnit.GXUnitCore
 	        procSource += "&XmlWriter.WriteElement(&Key, &Value)\r\n";
             procSource += "&XmlWriter.Close()\r\n";
 
-            Procedimiento p = new Procedimiento(nombre, procSource, procRules, "GXUnit", variables, propiedades);
+            Procedimiento p = new Procedimiento(nombre, procSource, procRules, Constantes.carpetaGXUnitFramework, variables, propiedades);
 
             ManejadorProcedimiento m = new ManejadorProcedimiento();
             m.CrearProcedimiento(p, true);
@@ -206,7 +206,7 @@ namespace PGGXUnit.Packages.GXUnit.GXUnitCore
             procSource += "&Value = &XmlReader.Value\r\n";
             procSource += "&XmlReader.Close()\r\n";
 
-            Procedimiento p = new Procedimiento(nombre, procSource, procRules, "GXUnit", variables, propiedades);
+            Procedimiento p = new Procedimiento(nombre, procSource, procRules, Constantes.carpetaGXUnitFramework, variables, propiedades);
 
             ManejadorProcedimiento m = new ManejadorProcedimiento();
             m.CrearProcedimiento(p, true);
@@ -230,7 +230,7 @@ namespace PGGXUnit.Packages.GXUnit.GXUnitCore
             LinkedList<DTPropiedad> prop = new LinkedList<DTPropiedad>();
             DTPropiedad p = new DTPropiedad("ExternalNamespace", "");
             prop.AddFirst(p);
-            SDTipo sdt = new SDTipo("GXUnitAssert", "GXUnit", niveles, root,prop);
+            SDTipo sdt = new SDTipo("GXUnitAssert", Constantes.carpetaFrameworkSDT.GetNombre(), niveles, root,prop);
             
             ManejadorSDT m = new ManejadorSDT();
             m.CrearSDT(sdt, true);
@@ -256,7 +256,7 @@ namespace PGGXUnit.Packages.GXUnit.GXUnitCore
             LinkedList<DTPropiedad> prop = new LinkedList<DTPropiedad>();
             DTPropiedad p = new DTPropiedad("ExternalNamespace", "");
             prop.AddFirst(p);
-            SDTipo sdt = new SDTipo("GXUnitTestCase", "GXUnit", niveles, root,prop);
+            SDTipo sdt = new SDTipo("GXUnitTestCase", Constantes.carpetaFrameworkSDT.GetNombre(), niveles, root,prop);
 
             ManejadorSDT m = new ManejadorSDT();
             m.CrearSDT(sdt, true);
@@ -287,7 +287,7 @@ namespace PGGXUnit.Packages.GXUnit.GXUnitCore
             DTPropiedad p = new DTPropiedad("ExternalNamespace", "");
             
             prop.AddFirst(p);
-            SDTipo sdt = new SDTipo("GXUnitSuite", "GXUnit", niveles, root,prop);
+            SDTipo sdt = new SDTipo("GXUnitSuite", Constantes.carpetaFrameworkSDT.GetNombre(), niveles, root,prop);
 
             ManejadorSDT m = new ManejadorSDT();
             m.CrearSDT(sdt, true);
@@ -297,15 +297,25 @@ namespace PGGXUnit.Packages.GXUnit.GXUnitCore
 
         private bool CrearCarpetasGXUnit()
         {
-            DTFolder folder1 = new DTFolder(Constantes.carpetaGXUnit, "");
             ManejadorFolder mf = new ManejadorFolder();
-            mf.CrearFolder(folder1, true);
 
-            DTFolder GXUnitSuites = new DTFolder(Constantes.carpetaSuites, Constantes.carpetaGXUnit);
-            mf.CrearFolder(GXUnitSuites, true);
+            //Todo revisar parametro TRUE
+            // Root folder GXUnit
+            mf.CrearFolder(Constantes.carpetaGXUnit, true);
+            // GXUnit -> Suites
+            mf.CrearFolder(Constantes.carpetaSuites, true);
+            // GXUnit -> Results
+            mf.CrearFolder(Constantes.carpetaResults, true);
 
-            DTFolder GXUnitResults = new DTFolder(Constantes.carpetaResults, Constantes.carpetaGXUnit);
-            mf.CrearFolder(GXUnitResults, true);
+            // GXUnit -> Framework
+            mf.CrearFolder(Constantes.carpetaGXUnitFramework, true);
+            // GXUnit -> Framework -> Asserts
+            mf.CrearFolder(Constantes.carpetaFrameworkAsserts, true);
+            // GXUnit -> Framework -> GXUITest
+            mf.CrearFolder(Constantes.carpetaFrameworkGXUITest, true);
+            // GXUnit -> Framework -> SDT
+            mf.CrearFolder(Constantes.carpetaFrameworkSDT, true);
+
             return true;
         }
 
@@ -379,7 +389,7 @@ namespace PGGXUnit.Packages.GXUnit.GXUnitCore
             procSource += "msg('=============', status)\r\n";
             procSource += "\r\n";
 
-            Procedimiento p = new Procedimiento(nombre, procSource, procRules, "GXUnit", variables, propiedades);
+            Procedimiento p = new Procedimiento(nombre, procSource, procRules, Constantes.carpetaGXUnitFramework, variables, propiedades);
             ManejadorProcedimiento m = new ManejadorProcedimiento();
             m.CrearProcedimiento(p, true);
 

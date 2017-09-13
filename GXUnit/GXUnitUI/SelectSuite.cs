@@ -1,4 +1,5 @@
 ﻿using PGGXUnit.Packages.GXUnit.GeneXusAPI;
+using PGGXUnit.Packages.GXUnit.GXUnitCore;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -66,7 +67,7 @@ namespace PGGXUnit.Packages.GXUnit.GXUnitUI
             {
                 try
                 {
-                    TestSuite suite = new TestSuite(textBoxNewSuite.Text, "GXUnitSuites");
+                    TestSuite suite = new TestSuite(textBoxNewSuite.Text, Constantes.carpetaSuites.GetNombre());
                     TreeNode suiteNode = new TreeNode(textBoxNewSuite.Text, 1, 1);
                     suiteNode.Tag = "TestSuite";
 

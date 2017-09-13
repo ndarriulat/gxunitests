@@ -40,7 +40,7 @@ namespace PGGXUnit.Packages.GXUnit.GXUnitCore
         {
             if (folder != null)
                 Folder = folder;
-            else Folder = "GXUnitSuites";
+            else Folder = Constantes.carpetaSuites.GetNombre();
             Suite = suite;
         }
         public String GetSource()

@@ -10,6 +10,7 @@ using System.Xml;
 
 using Artech.Architecture.UI.Framework.Editors;
 using Artech.Common.Properties;
+using PGGXUnit.Packages.GXUnit.GXUnitCore;
 
 //using PGGXUnit.Packages.GXUnit.GeneXusAPI;
 
@@ -185,7 +186,7 @@ namespace PGGXUnit.Packages.GXUnit
                     break;
                 case XmlNodeType.Text:
                 case XmlNodeType.CDATA:
-                    if (!xmlNode.Value.Equals("GXUnitSuites"))
+                    if (!xmlNode.Value.Equals(Constantes.carpetaSuites.GetNombre()))
                     {
                         newTreeNode = treeNodes.Add(xmlNode.Name);
                         newTreeNode.Text = "--> " + xmlNode.Value;

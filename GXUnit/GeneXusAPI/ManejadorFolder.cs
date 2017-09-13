@@ -35,11 +35,14 @@ namespace PGGXUnit.Packages.GXUnit.GeneXusAPI
                 if (fold == null)
                     fold = new Folder(model);
                 fold.Name = folder.GetNombre();
+                fold.Guid = folder.IdObjeto;
+
                 Folder foldPadre = GetFolderObject(this.model, folder.GetNombrePadre());
                 if (foldPadre != null)
                     fold.Parent = foldPadre;
                 else
                     fold.Parent = GetRootFolder(model);
+                
             }
 
             fold.Save();
@@ -96,7 +99,7 @@ namespace PGGXUnit.Packages.GXUnit.GeneXusAPI
 
         public DTFolder GetDTFolder(Folder fold)
         {
-            return new DTFolder(fold.Name, fold.Parent.Name);
+            return new DTFolder(fold.Name, fold.Guid, fold.Parent.Name);
         }
 
         public static Folder GetFolderObject(KBModel model, string fullName)

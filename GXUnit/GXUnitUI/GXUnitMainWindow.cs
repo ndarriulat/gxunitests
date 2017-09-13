@@ -165,7 +165,7 @@ namespace PGGXUnit.Packages.GXUnit.GXUnitUI
             {
                 TreeNode suiteNode = new TreeNode(suiteName, 1, 1);
                 suiteNode.Tag = "TestSuite";
-                string parentFolder = "GXUnitSuites";
+                string parentFolder = Constantes.carpetaSuites.GetNombre();
                 try
                 {
                     if (node != null)
@@ -241,7 +241,7 @@ namespace PGGXUnit.Packages.GXUnit.GXUnitUI
             Folder f = null;
             if (auxNode == null)
             {
-                f = ManejadorFolder.GetFolderObject(kbmodel, "GXUnitSuites");
+                f = ManejadorFolder.GetFolderObject(kbmodel, Constantes.carpetaSuites.GetNombre());
             }
             else
             {
@@ -531,7 +531,7 @@ namespace PGGXUnit.Packages.GXUnit.GXUnitUI
                 if (n.Parent != null)
                     parentname = n.Parent.Text;
                 else 
-                    parentname = "GXUnitSuites";
+                    parentname = Constantes.carpetaSuites.GetNombre();
 
                 if (n.Checked)
                 {
@@ -592,7 +592,7 @@ namespace PGGXUnit.Packages.GXUnit.GXUnitUI
             TreeNode auxNode = null;
 
             ManejadorFolder mf = new ManejadorFolder();
-            Folder folder = mf.GetFolder("GXUnitSuites");
+            Folder folder = mf.GetFolder(Constantes.carpetaSuites.GetNombre());
             if (folder != null)
             {
                 foreach (Folder f in folder.SubFolders)
@@ -667,7 +667,7 @@ namespace PGGXUnit.Packages.GXUnit.GXUnitUI
         {
             if (folder.Parent == null)
                 return false;
-            if (folder.Parent.Name == "GXUnitSuites")
+            if (folder.Parent.Name == Constantes.carpetaSuites.GetNombre())
                 return true;
             if (folder.Parent is Folder)
                 return isSuitesFolderChild(folder.Parent as Folder);

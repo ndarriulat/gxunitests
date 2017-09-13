@@ -19,7 +19,7 @@ namespace PGGXUnit.Packages.GXUnit.GeneXusAPI
             if (f != null)
                 throw new Exception("Unable to create the suite '" + suiteName + "', directory already exists.");
 
-            DTFolder SuiteFolder = new DTFolder(suiteName, parentFolder);
+            DTFolder SuiteFolder = new DTFolder(suiteName, new Guid(), parentFolder);
             mf.CrearFolder(SuiteFolder, false);
         }
 

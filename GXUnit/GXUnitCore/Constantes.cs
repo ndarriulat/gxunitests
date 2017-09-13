@@ -16,9 +16,14 @@ namespace PGGXUnit.Packages.GXUnit.GXUnitCore
         public const String VALOR_ESPERADO = "Expected";
         public const String ITEM = "Item";
 
-        public const String carpetaGXUnit = "GXUnit";
-        public const String carpetaSuites = "GXUnitSuites";
-        public const String carpetaResults = "GXUnitResults";
+        public static readonly DTFolder carpetaGXUnit = new DTFolder ("GXUnit", new Guid("ad5508ec-0000-43ae-a1a2-a671fb0ff967"), "");
+        public static readonly DTFolder carpetaSuites = new DTFolder("Suites", new Guid("ad5508ec-0001-43ae-a1a2-a671fb0ff967"), carpetaGXUnit.GetNombre());
+        public static readonly DTFolder carpetaResults = new DTFolder("Results", new Guid("ad5508ec-0002-43ae-a1a2-a671fb0ff967"), carpetaGXUnit.GetNombre());
+        public static readonly DTFolder carpetaGXUnitFramework = new DTFolder("Framework", new Guid("ad5508ec-0003-43ae-a1a2-a671fb0ff967"), carpetaGXUnit.GetNombre());
+        public static readonly DTFolder carpetaFrameworkAsserts = new DTFolder("Asserts", new Guid("ad5508ec-0004-43ae-a1a2-a671fb0ff967"), carpetaGXUnitFramework.GetNombre());
+        public static readonly DTFolder carpetaFrameworkGXUITest = new DTFolder("GXUITest", new Guid("ad5508ec-0005-43ae-a1a2-a671fb0ff967"), carpetaGXUnitFramework.GetNombre());
+        public static readonly DTFolder carpetaFrameworkSDT = new DTFolder("SDTs", new Guid("ad5508ec-0006-43ae-a1a2-a671fb0ff967"), carpetaGXUnitFramework.GetNombre()); 
+
 
         public const String About = "Proyecto GXUnit\r\nNicolás Carro\r\nMarcos Olivera\r\nJuan Pablo Goyení\r\n2010 - 2011";
 

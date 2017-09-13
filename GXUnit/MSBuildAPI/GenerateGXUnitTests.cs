@@ -43,12 +43,12 @@ namespace PGGXUnit.Packages.GXUnit.MSBuildAPI
             else
             {
                 LinkedList<DTTestCase> testCaseList = new LinkedList<DTTestCase>();
-                Folder GXUnitSuitesFolder = ManejadorFolder.GetFolderObject(KB.DesignModel, "GXUnitSuites");
+                Folder GXUnitSuitesFolder = ManejadorFolder.GetFolderObject(KB.DesignModel, Constantes.carpetaSuites.GetNombre());
                 foreach (KBObject suite in GXUnitSuitesFolder.Objects)
                 {
                     if (suite is Folder)
                     {
-                        testCaseList.AddLast(new DTTestCase(suite.Name, "GXUnitSuites", true));
+                        testCaseList.AddLast(new DTTestCase(suite.Name, Constantes.carpetaSuites.GetNombre(), true));
                         foreach (KBObject testCase in (suite as Folder).Objects)
                         {
                             if (testCase is Procedure)
