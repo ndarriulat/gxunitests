@@ -20,8 +20,8 @@ namespace PGGXUnit.Packages.GXUnit.Utils
             XmlDocument originalDocument = new XmlDocument();
             originalDocument.Load(originalXmlPath);
 
-            // Get all suites from the original xml            
-            XmlNodeList gxUnitSuitesNodes = originalDocument.SelectNodes("//Suites//Suite//Suite");
+            // Get suites root from the original xml            
+            XmlNode gxUnitSuitesNodes = originalDocument.SelectSingleNode("//Suites");
 
 
             // Create XmlDocument for the new xml file
@@ -30,8 +30,9 @@ namespace PGGXUnit.Packages.GXUnit.Utils
             XmlElement testsuitesRoot = formattedDocument.CreateElement("testsuites");
 
             // Create a <testsuite> for each suite existing in GXUnit, counting the amount of failure and successful tests
-            foreach (XmlNode gxUnitSuite in gxUnitSuitesNodes)
+            foreach (XmlNode gxUnitSuiteAux in gxUnitSuitesNodes.ChildNodes)
             {
+                XmlNode gxUnitSuite = gxUnitSuiteAux.FirstChild;
                 // Get suite name from the original xml
                 string suiteName = gxUnitSuite.FirstChild.InnerText;
                 XmlElement testSuiteElement = formattedDocument.CreateElement("testsuite");
@@ -65,8 +66,7 @@ namespace PGGXUnit.Packages.GXUnit.Utils
             //int skippedTestsCount = 0;
 
             // Get all the test cases nodes for the given suite
-            XmlNodeList gxUnitTestCasesList = gxUnitSuite.
-                SelectNodes("//SuiteName[text()[contains(.,'" + suiteName + "')]]//..//TestCases//TestCase//TestCase");
+            XmlNodeList gxUnitTestCasesList = gxUnitSuite.ChildNodes[1].ChildNodes;
 
             // Set the total amount of test cases inside the suite
             totalTestsCount = gxUnitTestCasesList.Count;
@@ -82,9 +82,9 @@ namespace PGGXUnit.Packages.GXUnit.Utils
                 XmlElement testCaseElement = formattedDocument.CreateElement("testcase");
 
                 // Get <TestCase> node
-                XmlNode testCaseNode = gxUnitTestCasesList[i];
+                XmlNode testCaseNode = gxUnitTestCasesList[i].ChildNodes[0];
                 // Get text in <TestName> node
-                string testCaseName = testCaseNode.ChildNodes[0].InnerText;
+                string testCaseName = testCaseNode.ChildNodes[0].FirstChild.InnerText;
                 // Set test case name
                 testCaseElement.SetAttribute("name", testCaseName);
 

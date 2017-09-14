@@ -49,13 +49,13 @@ namespace PGGXUnit.Packages.GXUnit.GeneXusAPI
         //}
 
 
-        public string CreateResult(String fileName,string kbPath=null)
+        public string CreateResult(String fileName, string kbPath = null)
         {
             try
             {
                 // TODO: remove optional parameter for kbPath
                 //string kbPath = KBManager.getTargetPath();
-                if (kbPath==null)
+                if (kbPath == null)
                 {
                     kbPath = KBManager.getTargetPath();
                 }
@@ -70,8 +70,8 @@ namespace PGGXUnit.Packages.GXUnit.GeneXusAPI
                 IXmlFormatter xmlFormatter = new JUnitXmlFormatter();
                 xmlFormatter.ConvertXml(sourcePath, targetPath);
 
-                //File.Copy(sourcePath, targetPath);
-                File.Delete(sourcePath);
+                // TODO: uncomment the following line in order to delete temporary results files
+                //File.Delete(sourcePath);
 
                 return targetPath;
             }

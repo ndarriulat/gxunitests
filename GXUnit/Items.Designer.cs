@@ -194,6 +194,15 @@ namespace PGGXUnit.Packages.GXUnit {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ResultsViewer.
+        /// </summary>
+        public static string seeResults {
+            get {
+                return ResourceManager.GetString("seeResults", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
         public static System.Drawing.Icon TestCaseIconMini {

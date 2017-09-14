@@ -58,6 +58,7 @@
   
   <ToolWindows>
     <ToolWindow id='CC753F38-8B9F-49B8-95D0-4BDF6D9CDB4D' title='GXUnit' location='right'/>
+    <ToolWindow id='3be58cf9-b38c-4dab-a42f-80389fb3040d' title='GXUnitResults' location='right'/>
   </ToolWindows>
   
 </Package>

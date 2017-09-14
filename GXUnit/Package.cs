@@ -307,6 +307,15 @@ namespace PGGXUnit.Packages.GXUnit
                     GXUnitWindow = GXUnitMainWindow.getInstance();
                 return GXUnitWindow;
             }
+            else
+            {
+                if (toolWindowId.Equals(GXUnitResultsViewer.guid))
+                {
+                    if (resultViewer == null)
+                        resultViewer = GXUnitResultsViewer.getInstance();
+                    return resultViewer;
+                }
+            }
 
             return base.CreateToolWindow(toolWindowId);
         }

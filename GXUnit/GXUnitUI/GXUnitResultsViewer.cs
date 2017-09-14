@@ -58,6 +58,10 @@ namespace PGGXUnit.Packages.GXUnit.GXUnitUI
 
                     //using System.IO;  
                     string path = GxuHelper.GetResultsPath();
+
+                    // TODO: change this as it is a temporal fix for Results Viewer
+                    path=path.Replace("GXUnitResults\\", "");
+
                     string myFile = Path.Combine(path, fileName);
 
                     tbLabel.Text = "Results: " + fileName;

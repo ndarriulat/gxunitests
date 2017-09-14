@@ -36,7 +36,7 @@ namespace PGGXUnit.Packages.GXUnit
             AddCommand(CommandKeys.GXUnitWindow, new ExecHandler(ExecGXUnitWindow));
 
             //Open Results Viewer
-            AddCommand(CommandKeys.GxUnitResultsWindow, new ExecHandler(ExecGXUnitWindow));
+            AddCommand(CommandKeys.GxUnitResultsWindow, new ExecHandler(RunCommand_GXUnitResultsWindow));
 
             //About
             AddCommand(CommandKeys.About, new ExecHandler(ExecAbout));

@@ -122,4 +122,5 @@ C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\ob
 C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\obj\Debug\GXUnit.csproj.GenerateResource.Cache
 C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\obj\Debug\GXUnit.dll
 C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\obj\Debug\GXUnit.pdb
+C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\obj\Debug\PGGXUnit.Packages.GXUnit.GXUnitUI.GXUnitResultsViewer.resources
 C:\Users\Nicolas\Documents\Labs\GXtest4\GXUnit - ultima version\GXUnit\GXUnit\obj\Debug\GXUnit.csprojResolveAssemblyReference.cache
