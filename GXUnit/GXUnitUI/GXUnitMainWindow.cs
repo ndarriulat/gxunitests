@@ -444,6 +444,7 @@ namespace PGGXUnit.Packages.GXUnit.GXUnitUI
                 else
                 {
                     Test();
+                    //OpenResultsViewer();
                 }
             }
             else
@@ -451,6 +452,11 @@ namespace PGGXUnit.Packages.GXUnit.GXUnitUI
                 MessageBox.Show("Open a knowledge base first.", "GXUnit");
             }
             
+        }
+
+        private void OpenResultsViewer()
+        {
+            GXUnitResultsViewer.getInstance().Show();
         }
 
         private void Test()
