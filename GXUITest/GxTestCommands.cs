@@ -64,7 +64,7 @@ namespace GXtest
         /// <param name="browserName"></param>
         /// <param name="username"></param>
         /// <param name="accessKey"></param>
-        public void StartCloudExecution(string url, string browserName, string username,string accessKey)
+        public void StartCloudExecution(string url, string browserName, string username, string accessKey)
         {            
             DesiredCapabilities caps = new DesiredCapabilities();
             caps.SetCapability(CapabilityType.BrowserName, browserName);
@@ -75,6 +75,7 @@ namespace GXtest
             driver.Manage().Window.Maximize();
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
         }
+
         public void Go(string url)
         {
             driver.Navigate().GoToUrl(url);
@@ -83,8 +84,8 @@ namespace GXtest
                 End();
                 throw new WebDriverException("Couldn't reach the url.");
             }
-
         }
+
         public bool AppearText(string text)
         {
             try
@@ -103,6 +104,7 @@ namespace GXtest
             }
             return false;
         }
+
         public void Click(string id)
         {
             try
@@ -114,11 +116,12 @@ namespace GXtest
                 throw e;
             }
         }
-        public void ClickByName(string text)
+
+        public void ClickByName(string name)
         {
             try
             {
-                driver.FindElement(By.Name(text)).Click();
+                driver.FindElement(By.Name(name)).Click();
             }
             catch (WebDriverException e)
             {
@@ -126,6 +129,7 @@ namespace GXtest
                 throw e;
             }
         }
+
         public void ClickByText(string text)
         {
             try
@@ -138,13 +142,38 @@ namespace GXtest
                 throw e;
             }
         }
+
+        public void SendKeysById(string id, string text)
+        {
+            try
+            {
+                driver.FindElement(By.Id(id)).SendKeys(text);
+            }
+            catch (WebDriverException e)
+            {
+                End();
+                throw e;
+            }
+        }
+
+        public void SendKeysByName(string name, string text)
+        {
+            try
+            {
+                driver.FindElement(By.Name(name)).SendKeys(text);
+            }
+            catch (WebDriverException e)
+            {
+                End();
+                throw e;
+            }
+        }
+
         public void End()
         {
             Thread.Sleep(2000);
             driver.Close();
             driver.Quit();
-        }
-     
-    }
-    
+        }     
+    }    
 }
