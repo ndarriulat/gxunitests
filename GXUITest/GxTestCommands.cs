@@ -4,6 +4,7 @@ using OpenQA.Selenium.Remote;
 using OpenQA.Selenium.Support.UI;
 using System;
 using System.Threading;
+using System.Configuration;
 //using System.IO;
 
 namespace GXtest
@@ -12,12 +13,16 @@ namespace GXtest
     {
         private IWebDriver driver;
         private static IWebDriver staticDriver;
-        private string location = "./";
+        private string location = ConfigurationManager.AppSettings["path"] ?? "./";
         public void SetLocation(string loc)
         {
             location = loc;
         }
-        public void Start()
+
+        /// <summary>
+        /// Opens a local connection using Chrome Driver.
+        /// </summary>
+        public void StartLocal()
         {       
             ChromeOptions chromeOptions = new ChromeOptions();
             chromeOptions.AddExcludedArgument("-ignore-certifcate-errors");
@@ -39,10 +44,34 @@ namespace GXtest
             driver.Manage().Window.Maximize();
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
         }
+
+        /// <summary>
+        /// Opens a remote connection using Remote Driver.
+        /// </summary>
+        /// <param name="url"></param>
         public void StartRemote(string url)
         {
             ChromeOptions options = new ChromeOptions();
             driver = new RemoteWebDriver(new Uri(url), options.ToCapabilities());
+            driver.Manage().Window.Maximize();
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+        }
+
+        /// <summary>
+        /// Opens a connection with Sauce Labs, with the given parameters.
+        /// </summary>
+        /// <param name="url"></param>
+        /// <param name="browserName"></param>
+        /// <param name="username"></param>
+        /// <param name="accessKey"></param>
+        public void StartCloudExecution(string url, string browserName, string username,string accessKey)
+        {            
+            DesiredCapabilities caps = new DesiredCapabilities();
+            caps.SetCapability(CapabilityType.BrowserName, browserName);
+            caps.SetCapability("username", username);
+            caps.SetCapability("accessKey", accessKey);
+            driver = new RemoteWebDriver(new Uri(url), caps, TimeSpan.FromSeconds(600));
+
             driver.Manage().Window.Maximize();
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
         }
