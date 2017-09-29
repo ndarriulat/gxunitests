@@ -96,7 +96,7 @@ namespace PGGXUnit.Packages.GXUnit.Utils
                 testCaseElement.SetAttribute("time", testCaseExecutionTime_Seconds.ToString().Replace(',', '.'));
 
                 // Set className in order to display a package name in Jenkins
-                testCaseElement.SetAttribute("classname", suiteName + "." + testCaseName);
+                testCaseElement.SetAttribute("classname", suiteName);
 
                 // Get a list of assertions, which could match this relative XPath: "//Asserts//Assert//Assert"
                 XmlNodeList testCaseAssertionsList = testCaseNode.ChildNodes[2].ChildNodes;
