@@ -5,6 +5,7 @@ using OpenQA.Selenium.Support.UI;
 using System;
 using System.Threading;
 using System.Configuration;
+using OpenQA.Selenium.Interactions;
 //using System.IO;
 
 namespace GXtest
@@ -43,6 +44,7 @@ namespace GXtest
             driver = staticDriver;
             driver.Manage().Window.Maximize();
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+            driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(10);
         }
 
         /// <summary>
@@ -55,6 +57,7 @@ namespace GXtest
             driver = new RemoteWebDriver(new Uri(url), options.ToCapabilities());
             driver.Manage().Window.Maximize();
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+            driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(10);
         }
 
         /// <summary>
@@ -74,7 +77,7 @@ namespace GXtest
 
             driver.Manage().Window.Maximize();
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
-            driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(5);
+            driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(10);
         }
 
         public void Go(string url)
@@ -86,7 +89,6 @@ namespace GXtest
                 throw new WebDriverException("Couldn't reach the url.");
             }
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(2);
-            Thread.Sleep(5000);
         }
 
         public bool AppearText(string text)
@@ -95,13 +97,15 @@ namespace GXtest
             {
                 if (!string.IsNullOrEmpty(text))
                 {
+                    WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
+                    wait.Until(driver => driver.FindElement(By.XPath("//*[contains(text(),'" + text + "')]")).Displayed);
                     IWebElement aux =  driver.FindElement(By.XPath("//*[contains(text(),'" + text + "')]"));
                     return true;
                    /* IWebElement bodyTag = driver.FindElement(By.TagName("body"));
                       return bodyTag.Text.ToLower().Contains(text.ToLower());*/
                 }
             }
-            catch (WebDriverException e)
+            catch (WebDriverException)
             {
                 return false;
             }
@@ -112,9 +116,10 @@ namespace GXtest
         {
             try
             {
+                WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
+                wait.Until(driver => driver.FindElement(By.Id(id)).Displayed);
                 IWebElement elem = driver.FindElement(By.Id(id));
                 elem.Click();
-                Thread.Sleep(2000);
             }
             catch (WebDriverException e) {
                 End();
@@ -126,9 +131,10 @@ namespace GXtest
         {
             try
             {
+                WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
+                wait.Until(driver => driver.FindElement(By.Name(name)).Displayed);
                 IWebElement elem = driver.FindElement(By.Name(name));
                 elem.Click();
-                Thread.Sleep(2000);
             }
             catch (WebDriverException e)
             {
@@ -141,9 +147,10 @@ namespace GXtest
         {
             try
             {
+                WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
+                wait.Until(driver => driver.FindElement(By.XPath("//*[contains(text(),'" + text + "')]")).Displayed);
                 IWebElement elem = driver.FindElement(By.XPath("//*[contains(text(),'" + text + "')]"));
                 elem.Click();
-                Thread.Sleep(2000);
             }
             catch (WebDriverException e)
             {
@@ -152,10 +159,12 @@ namespace GXtest
             }
         }
 
-        public void SendKeysById(string id, string text)
+        public void SendKeys(string id, string text)
         {
             try
             {
+                WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
+                wait.Until(driver => driver.FindElement(By.Id(id)).Displayed);
                 IWebElement elem = driver.FindElement(By.Id(id));
                 elem.Clear();
                 elem.SendKeys(text);
@@ -171,6 +180,8 @@ namespace GXtest
         {
             try
             {
+                WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
+                wait.Until(driver => driver.FindElement(By.Name(name)).Displayed);
                 IWebElement elem = driver.FindElement(By.Name(name));
                 elem.Clear();
                 elem.SendKeys(text);

@@ -14,12 +14,28 @@ namespace ConsoleApplication
             clientPort.StartLocal();
             //clientPort.Go("http://192.168.0.156/UnitTests2.NetEnvironment/person.aspx");      
             //bool ok =clientPort.AppearText("Persossn");
+
+            /*clientPort.Go("http://apps5.genexus.com/Id4a621093eec500c52b22f8b688e172ef/producto.aspx");
+
+            clientPort.SendKeys("PRODUCTONOMBRE", "Notebook");
+
+            clientPort.SendKeysByName("PRODUCTOPRECIOUNITARIO", "1950");
+
+            clientPort.ClickByName("BTN_ENTER");
+
+            bool appersConfirm = clientPort.AppearText("Data has been successfully added.");*/
+
             clientPort.Go("http://apps5.genexus.com/Id4a621093eec500c52b22f8b688e172ef/factura.aspx");
-            
-            clientPort.SendKeysByName("FACTURARAZONSOCIAL", "1891");
+
+            clientPort.SendKeys("FACTURARAZONSOCIAL", "Abstracta S.R.L.");
+
+            clientPort.Click("FACTURACLIENTEFINAL");
+
+            clientPort.SendKeys("FACTURAFECHA", "09/30/17");
+
+            clientPort.Click("PROMPT_4_0001");
 
             clientPort.End();
         }
-        
     }
 }
