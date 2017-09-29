@@ -74,6 +74,7 @@ namespace GXtest
 
             driver.Manage().Window.Maximize();
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+            driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(5);
         }
 
         public void Go(string url)
@@ -84,6 +85,8 @@ namespace GXtest
                 End();
                 throw new WebDriverException("Couldn't reach the url.");
             }
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(2);
+            Thread.Sleep(5000);
         }
 
         public bool AppearText(string text)
@@ -109,7 +112,9 @@ namespace GXtest
         {
             try
             {
-                driver.FindElement(By.Id(id)).Click();
+                IWebElement elem = driver.FindElement(By.Id(id));
+                elem.Click();
+                Thread.Sleep(2000);
             }
             catch (WebDriverException e) {
                 End();
@@ -121,7 +126,9 @@ namespace GXtest
         {
             try
             {
-                driver.FindElement(By.Name(name)).Click();
+                IWebElement elem = driver.FindElement(By.Name(name));
+                elem.Click();
+                Thread.Sleep(2000);
             }
             catch (WebDriverException e)
             {
@@ -134,7 +141,9 @@ namespace GXtest
         {
             try
             {
-                driver.FindElement(By.XPath("//*[contains(text(),'"+text+"')]")).Click();
+                IWebElement elem = driver.FindElement(By.XPath("//*[contains(text(),'" + text + "')]"));
+                elem.Click();
+                Thread.Sleep(2000);
             }
             catch (WebDriverException e)
             {
@@ -147,7 +156,9 @@ namespace GXtest
         {
             try
             {
-                driver.FindElement(By.Id(id)).SendKeys(text);
+                IWebElement elem = driver.FindElement(By.Id(id));
+                elem.Clear();
+                elem.SendKeys(text);
             }
             catch (WebDriverException e)
             {
@@ -160,7 +171,9 @@ namespace GXtest
         {
             try
             {
-                driver.FindElement(By.Name(name)).SendKeys(text);
+                IWebElement elem = driver.FindElement(By.Name(name));
+                elem.Clear();
+                elem.SendKeys(text);
             }
             catch (WebDriverException e)
             {
