@@ -5,6 +5,7 @@ using OpenQA.Selenium.Support.UI;
 using System;
 using System.Threading;
 using System.Configuration;
+using OpenQA.Selenium.Interactions;
 //using System.IO;
 
 namespace GXtest
@@ -43,6 +44,7 @@ namespace GXtest
             driver = staticDriver;
             driver.Manage().Window.Maximize();
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+            driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(10);
         }
 
         /// <summary>
@@ -55,6 +57,7 @@ namespace GXtest
             driver = new RemoteWebDriver(new Uri(url), options.ToCapabilities());
             driver.Manage().Window.Maximize();
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+            driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(10);
         }
 
         /// <summary>
@@ -64,7 +67,7 @@ namespace GXtest
         /// <param name="browserName"></param>
         /// <param name="username"></param>
         /// <param name="accessKey"></param>
-        public void StartCloudExecution(string url, string browserName, string username,string accessKey)
+        public void StartCloudExecution(string url, string browserName, string username, string accessKey)
         {            
             DesiredCapabilities caps = new DesiredCapabilities();
             caps.SetCapability(CapabilityType.BrowserName, browserName);
@@ -74,7 +77,9 @@ namespace GXtest
 
             driver.Manage().Window.Maximize();
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+            driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(10);
         }
+
         public void Go(string url)
         {
             driver.Navigate().GoToUrl(url);
@@ -83,42 +88,53 @@ namespace GXtest
                 End();
                 throw new WebDriverException("Couldn't reach the url.");
             }
-
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(2);
         }
+
         public bool AppearText(string text)
         {
             try
             {
                 if (!string.IsNullOrEmpty(text))
                 {
+                    WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
+                    wait.Until(driver => driver.FindElement(By.XPath("//*[contains(text(),'" + text + "')]")).Displayed);
                     IWebElement aux =  driver.FindElement(By.XPath("//*[contains(text(),'" + text + "')]"));
                     return true;
                    /* IWebElement bodyTag = driver.FindElement(By.TagName("body"));
                       return bodyTag.Text.ToLower().Contains(text.ToLower());*/
                 }
             }
-            catch (WebDriverException e)
+            catch (WebDriverException)
             {
                 return false;
             }
             return false;
         }
+
         public void Click(string id)
         {
             try
             {
-                driver.FindElement(By.Id(id)).Click();
+                WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
+                wait.Until(driver => driver.FindElement(By.Id(id)).Displayed);
+                IWebElement elem = driver.FindElement(By.Id(id));
+                elem.Click();
             }
             catch (WebDriverException e) {
                 End();
                 throw e;
             }
         }
-        public void ClickByName(string text)
+
+        public void ClickByName(string name)
         {
             try
             {
-                driver.FindElement(By.Name(text)).Click();
+                WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
+                wait.Until(driver => driver.FindElement(By.Name(name)).Displayed);
+                IWebElement elem = driver.FindElement(By.Name(name));
+                elem.Click();
             }
             catch (WebDriverException e)
             {
@@ -126,11 +142,15 @@ namespace GXtest
                 throw e;
             }
         }
+
         public void ClickByText(string text)
         {
             try
             {
-                driver.FindElement(By.XPath("//*[contains(text(),'"+text+"')]")).Click();
+                WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
+                wait.Until(driver => driver.FindElement(By.XPath("//*[contains(text(),'" + text + "')]")).Displayed);
+                IWebElement elem = driver.FindElement(By.XPath("//*[contains(text(),'" + text + "')]"));
+                elem.Click();
             }
             catch (WebDriverException e)
             {
@@ -138,13 +158,46 @@ namespace GXtest
                 throw e;
             }
         }
+
+        public void SendKeys(string id, string text)
+        {
+            try
+            {
+                WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
+                wait.Until(driver => driver.FindElement(By.Id(id)).Displayed);
+                IWebElement elem = driver.FindElement(By.Id(id));
+                elem.Clear();
+                elem.SendKeys(text);
+            }
+            catch (WebDriverException e)
+            {
+                End();
+                throw e;
+            }
+        }
+
+        public void SendKeysByName(string name, string text)
+        {
+            try
+            {
+                WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
+                wait.Until(driver => driver.FindElement(By.Name(name)).Displayed);
+                IWebElement elem = driver.FindElement(By.Name(name));
+                elem.Clear();
+                elem.SendKeys(text);
+            }
+            catch (WebDriverException e)
+            {
+                End();
+                throw e;
+            }
+        }
+
         public void End()
         {
             Thread.Sleep(2000);
             driver.Close();
             driver.Quit();
-        }
-     
-    }
-    
+        }     
+    }    
 }
